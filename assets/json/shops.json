@@ -17,6 +17,33 @@
             "maps": "https://www.google.com/maps/place/1008+Woodland+St,+Nashville,+TN+37206/data=!4m2!3m1!1s0x886467d2bdc9e6ad:0xb08a109a9c284d9f?sa=X&ved=0ahUKEwjx8JCNhJDYAhXCKCYKHSIYDYgQ8gEIJzAA",
             "website": "http://www.goldclubelectric.com/",
             "img": "assets/img/goldclubelectric.jpg"
+        },
+        {
+            "name": "Black 13 Tattoo Parlor",
+            "region": "The Gulch",
+            "desc": "Black 13 Tattoo Parlor is located in Nashville Tennessee’s historic Cummins Station and offers a clean, comfortable, upscale environment with the finest artistry and customer experience.",
+            "phone": "615.750.3741",
+            "maps": "https://www.google.com/maps/place/Black+13+Tattoo+Parlor/@36.1547884,-86.7846095,17z/data=!3m1!4b1!4m5!3m4!1s0x8864668aac87681b:0xb4786d4bae161e09!8m2!3d36.1547884!4d-86.7824155",
+            "website": "https://black13tattoo.com/",
+            "img": "assets/img/black13.jpg"
+        },
+        {
+            "name": "Grimm City Tattoo",
+            "region": "Harding Place",
+            "desc": "All 5 of GrimmCity Tattoo artists are are very well rounded, versatile artist who can do a wide range of styles from realistic, new school/neo-traditional, classic tattoo style.",
+            "phone": "615.457.2157",
+            "maps": "https://www.google.com/maps/place/415+Harding+Pl,+Nashville,+TN+37211/data=!4m2!3m1!1s0x88646f9a122597a9:0x9c689e866fffba15?sa=X&ved=0ahUKEwj79aeXkZLYAhWHSyYKHXfTADcQ8gEIJzAA",
+            "website": "https://www.grimmcitytattoos.com/",
+            "img": "assets/img/grimm.JPG"
+        },
+        {
+            "name": "Battleground Tattoo Parlour",
+            "region": "Franklin",
+            "desc": "Battleground Tattoo Parlour was created to serve historic Franklin Tennessee and the surrounding area with the best in custom, progressive tattooing.",
+            "phone": "615.465.6878",
+            "maps": "https://www.google.com/maps/place/Battleground+Tattoo+Parlour/@35.9194054,-86.8289591,17z/data=!3m1!4b1!4m5!3m4!1s0x88647ed5d40489c1:0xbaa484f1e3c7e108!8m2!3d35.9194054!4d-86.8267704",
+            "website": "http://battlegroundtattoo.com/",
+            "img": "assets/img/battleground.jpg"
         }
     ]
 }
