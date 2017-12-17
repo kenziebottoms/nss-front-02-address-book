@@ -1,0 +1,12 @@
+{
+    "shops": [
+        {
+            "name": "Gold Club Electric Tattoo",
+            "region": "East Nashville",
+            "desc": "We specialize In all forms of tattooing.  Bright and bold traditional tattoos, vibrant new school, smooth and defined black and grey, precision script work, life like color realism, and the art of the cover up.",
+            "phone": "615.835.3923",
+            "maps": "https://www.google.com/maps/place/1008+Woodland+St,+Nashville,+TN+37206/data=!4m2!3m1!1s0x886467d2bdc9e6ad:0xb08a109a9c284d9f?sa=X&ved=0ahUKEwjx8JCNhJDYAhXCKCYKHSIYDYgQ8gEIJzAA",
+            "website": "http://www.goldclubelectric.com/"
+        }
+    ]
+}
