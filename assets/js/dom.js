@@ -4,15 +4,31 @@ const shopModule = require("./shops");
 
 const refreshShops = () => {
     let tabContent = document.getElementById("alpha-dir-tabContent");
-    tabContent.innerHTML = "";
+    let tabs = tabContent.children;
+    [...tabs].forEach(tab => {
+        tab.innerHTMl = "";
+    });
     let shops = shopModule.getShops();
-    shops.forEach(shop => {
-        tabContent.innerHTML += getCard(shop);
+    shops.forEach((shop, index) => {
+        addShop(shop, index);
     });
 };
 
+const addShop = (shop, index) => {
+    let letter = shop.name.substring(0,1).toLowerCase();
+    let letterDiv = document.getElementById(letter);
+    let letterTab = document.getElementById(`${letter}-tab`);
+    letterDiv.innerHTML += getCard(shop);
+    letterDiv.classList.remove("hidden");
+    letterTab.classList.remove("hidden");
+    if (index == 0) {
+        letterTab.classList += " active ";
+        letterDiv.classList += " show active ";
+    }
+};
+
 const getCard = shop => {
-    return `<div class="card">
+    return `<div class="card my-3">
         <img class="card-img-top" src="${shop.img}">
         <div class="card-body">
             <h4 class="card-title">${shop.name}</h4>

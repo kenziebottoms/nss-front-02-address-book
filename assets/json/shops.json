@@ -1,6 +1,15 @@
 {
     "shops": [
         {
+            "name": "Victory Tattoo",
+            "region": "West Nashville",
+            "desc": "Victory Tattoo is West Nashville's premier tattoo shop. Victory Tattoo is a clean, sterile, comfortable environment boasting an impressive line up of some of Nashville's best tattooers.",
+            "phone": "615.678.6803",
+            "maps": "https://www.google.com/maps/place/Victory+Tattoo/@36.1522085,-86.8473949,17z/data=!4m13!1m7!3m6!1s0x8864616bc8ba8899:0xfce6a2ea7846cf6b!2s4808+Charlotte+Ave,+Nashville,+TN+37209!3b1!8m2!3d36.1522085!4d-86.8452009!3m4!1s0x8864616bcedb99c3:0x862c26960afd188!8m2!3d36.1522085!4d-86.8452009",
+            "website": "http://www.victorynashville.com/",
+            "img": "assets/img/victory.png"
+        },
+        {
             "name": "Gold Club Electric Tattoo",
             "region": "East Nashville",
             "desc": "We specialize In all forms of tattooing.  Bright and bold traditional tattoos, vibrant new school, smooth and defined black and grey, precision script work, life like color realism, and the art of the cover up.",
