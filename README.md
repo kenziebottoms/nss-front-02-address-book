@@ -15,4 +15,4 @@ Use XHR to create a simple tabbed contact info collection.
 - [ ] When the user submits a contact, it should display below the form with two buttons: "Save" and "Edit".
     - [ ] If user clicks "save", the contact should be saved to localStorage, and be available to the same search function that retrieves the built-in contacts.
     - [ ] If user clicks "Edit", the form is re-populated with the contact info so the user can edit it.
-- [ ] The UI should use Bootstrap.
+- [x] The UI should use Bootstrap.

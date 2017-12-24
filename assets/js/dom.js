@@ -28,7 +28,7 @@ const addShop = (shop, index) => {
 };
 
 const getCard = shop => {
-    return `<div class="card my-3">
+    return `<div class="card mb-3">
         <img class="card-img-top" src="${shop.img}">
         <div class="card-body">
             <h4 class="card-title">${shop.name}</h4>

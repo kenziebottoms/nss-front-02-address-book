@@ -12,6 +12,16 @@
 <body>
     <div class="container my-4">
         <div class="row">
+            <div class="input-group col-md-6 mx-auto mb-4">
+                <input type="text" id="search" class="form-control" placeholder="Search shops">
+            </div>
+        </div>
+        <div id="search-div" class="hidden row mt-2 mb-5">
+            <h5 class="col-md-8 mx-auto my-3"></h5>
+            <div class="col-md-8 mx-auto" id="search-results">
+            </div>
+        </div>
+        <div class="row">
             <div class="col-2 col-md-1">
                 <div class="nav flex-column nav-pills" id="alpha-dir" role="tablist" aria-orientation="vertical">
                     <a class="nav-link hidden" id="a-tab" data-toggle="pill" href="#a" role="tab">A</a>

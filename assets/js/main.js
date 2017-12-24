@@ -2,6 +2,7 @@
 
 const shopModule = require("./shops");
 const domController = require("./dom");
+const eventController = require("./events");
 
 const fetchShops = url => {
     let shopPromise = new Promise((resolve, reject) => {
@@ -31,3 +32,4 @@ const parseShops = data => {
 };
 
 fetchShops("assets/json/shops.json").then(parseShops);
+eventController.activateEventListeners();

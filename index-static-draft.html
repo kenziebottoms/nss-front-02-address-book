@@ -10,28 +10,57 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container-fluid row my-4">
-        <div class="col-2 col-md-1">
-            <div class="nav flex-column nav-pills" id="alpha-dir" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="a-tab" data-toggle="pill" href="#a" role="tab">A</a>
+    <div class="container my-4">
+        <div class="row">
+            <div class="input-group col-md-6 mx-auto mb-4">
+                <input type="text" id="search" class="form-control" placeholder="Search shops">
             </div>
         </div>
-        <div class="col-10 col-md-11">
-            <div class="tab-content" id="alpha-dir-tabContent">
-                <div class="tab-pane fade show active" id="a" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-                <div class="tab-pane fade" id="b" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                <div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-                <div class="tab-pane fade" id="g" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/goldclubelectric.jpg">
-                        <div class="card-body">
-                            <h4 class="card-title">Gold Club Electric Tattoo</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">East Nashville</h6>
-                            <p class="card-text">We specialize In all forms of tattooing.  Bright and bold traditional tattoos, vibrant new school, smooth and defined black and grey, precision script work, life like color realism, and the art of the cover up.</p>
-                            <div class="card-text">
-                                <a class="card-link" href="tel:615.835.3923" target="blank">Call</a>
-                                <a class="card-link" href="https://www.google.com/maps/place/1008+Woodland+St,+Nashville,+TN+37206/data=!4m2!3m1!1s0x886467d2bdc9e6ad:0xb08a109a9c284d9f?sa=X&ved=0ahUKEwjx8JCNhJDYAhXCKCYKHSIYDYgQ8gEIJzAA" target="blank">Directions</a>
-                                <a class="card-link" href="http://www.goldclubelectric.com/" target="blank">Website</a>
+        <div class="row mt-2 mb-5">
+            <h5 class="col-md-8 mx-auto my-3">Results for 'term'</h5>
+            <div class="col-md-8 mx-auto" id="search-results">
+                <div class="card">
+                    <div class="py-5 card-img" style="background-image: url(assets/img/goldclubelectric.jpg);"></div>
+                    <div class="card-body">
+                        <h4 class="card-title">Gold Club Electric Tattoo</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">East Nashville</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="py-5 card-img" style="background-image: url(assets/img/goldclubelectric.jpg);"></div>
+                    <div class="card-body">
+                        <h4 class="card-title">Gold Club Electric Tattoo</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">East Nashville</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-1">
+                <div class="nav flex-column nav-pills" id="alpha-dir" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="a-tab" data-toggle="pill" href="#a" role="tab">A</a>
+                    <a class="nav-link" id="b-tab" data-toggle="pill" href="#b" role="tab">b</a>
+                    <a class="nav-link" id="c-tab" data-toggle="pill" href="#c" role="tab">c</a>
+                    <a class="nav-link" id="g-tab" data-toggle="pill" href="#g" role="tab">g</a>
+                </div>
+            </div>
+            <div class="col-10 col-md-11">
+                <div class="tab-content" id="alpha-dir-tabContent">
+                    <div class="tab-pane fade show active" id="a" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                    <div class="tab-pane fade" id="b" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                    <div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                    <div class="tab-pane fade" id="g" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/goldclubelectric.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Gold Club Electric Tattoo</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">East Nashville</h6>
+                                <p class="card-text">We specialize In all forms of tattooing.  Bright and bold traditional tattoos, vibrant new school, smooth and defined black and grey, precision script work, life like color realism, and the art of the cover up.</p>
+                                <div class="card-text">
+                                    <a class="card-link" href="tel:615.835.3923" target="blank">Call</a>
+                                    <a class="card-link" href="https://www.google.com/maps/place/1008+Woodland+St,+Nashville,+TN+37206/data=!4m2!3m1!1s0x886467d2bdc9e6ad:0xb08a109a9c284d9f?sa=X&ved=0ahUKEwjx8JCNhJDYAhXCKCYKHSIYDYgQ8gEIJzAA" target="blank">Directions</a>
+                                    <a class="card-link" href="http://www.goldclubelectric.com/" target="blank">Website</a>
+                                </div>
                             </div>
                         </div>
                     </div>
