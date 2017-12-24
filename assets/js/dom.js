@@ -3,11 +3,7 @@
 const shopModule = require("./shops");
 
 const refreshShops = () => {
-    let tabContent = document.getElementById("alpha-dir-tabContent");
-    let tabs = tabContent.children;
-    [...tabs].forEach(tab => {
-        tab.innerHTMl = "";
-    });
+    $("#alpha-dir-tabContent .tab-pane").html("");
     let shops = shopModule.getShops();
     shops.forEach((shop, index) => {
         addShop(shop, index);
@@ -16,14 +12,14 @@ const refreshShops = () => {
 
 const addShop = (shop, index) => {
     let letter = shop.name.substring(0,1).toLowerCase();
-    let letterDiv = document.getElementById(letter);
-    let letterTab = document.getElementById(`${letter}-tab`);
-    letterDiv.innerHTML += getCard(shop);
-    letterDiv.classList.remove("hidden");
-    letterTab.classList.remove("hidden");
+    let letterDiv = $(`#${letter}`);
+    let letterTab = $(`#${letter}-tab`);
+    letterDiv.append(getCard(shop));
+    letterDiv.removeClass("hidden");
+    letterTab.removeClass("hidden");
     if (index == 0) {
-        letterTab.classList += " active ";
-        letterDiv.classList += " show active ";
+        letterTab.addClass("active");
+        letterDiv.addClass("show active");
     }
 };
 
