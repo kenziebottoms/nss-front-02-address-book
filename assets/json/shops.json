@@ -44,6 +44,51 @@
             "maps": "https://www.google.com/maps/place/Battleground+Tattoo+Parlour/@35.9194054,-86.8289591,17z/data=!3m1!4b1!4m5!3m4!1s0x88647ed5d40489c1:0xbaa484f1e3c7e108!8m2!3d35.9194054!4d-86.8267704",
             "website": "http://battlegroundtattoo.com/",
             "img": "assets/img/battleground.jpg"
+        },
+        {
+            "name": "Nashville Ink Tattoo",
+            "region": "Downtown",
+            "desc": "The safety of our clients is of utmost importance at Nashville Ink Tattoo. We ensure that all tattoo and piercing instruments and materials are either thrown away or sterilized in a high-pressure, high-temperature autoclave after each use.",
+            "phone": "615.454.6112",
+            "maps": "https://www.google.com/maps/place/NASHVILLE+INK/@36.1641054,-86.7805051,17z/data=!4m13!1m7!3m6!1s0x88646659bee0e777:0x60ada34fdc058a73!2s312+Church+St,+Nashville,+TN+37201!3b1!8m2!3d36.1641054!4d-86.7783111!3m4!1s0x88646659bee0e777:0x9aa7f2ce52d3b73c!8m2!3d36.1641054!4d-86.7783111?hl=en-US",
+            "website": "http://nashvilleinktattoo.com/",
+            "img": "assets/img/nashvilleink.jpg"
+        },
+        {
+            "name": "Rebel Yell Tattoo &amp; Social Club",
+            "region": "South Nashville",
+            "desc": " Rebel Yell Tattoo is conveniently located about a half-mile south of downtown Nashville, on Fourth Avenue South. Owned and Operated by J. Evans, we are Nashville’s premiere Traditional based tattoo shop.",
+            "phone": "615.750.2008",
+            "maps": "https://www.google.com/maps/place/Rebel+Yell+Tattoo+and+Social+Club/@36.148099,-86.7706017,17z/data=!4m13!1m7!3m6!1s0x8864666ec40bad17:0xf088e970f2fca7c1!2s1022+4th+Ave+S,+Nashville,+TN+37210!3b1!8m2!3d36.148099!4d-86.768413!3m4!1s0x8864666ec40bad17:0x9fc1f9bf201e6983!8m2!3d36.148099!4d-86.768413",
+            "website": "https://rebelyellnashville.com/",
+            "img": "assets/img/rebelyell.jpg"
+        },
+        {
+            "name": "Icon Body Piercing",
+            "region": "Midtown",
+            "desc": "We've been supplying Nashville and Murfreesboro with high quality tattooing, body piercing, and body jewelry since 1997. Our top priority is our customers. We give 110% to make sure that everyone feels comfortable and gets good work.",
+            "phone": "615.329.4066",
+            "maps": "https://www.google.com/maps/place/Icon+Body+Piercing/@36.1545148,-86.8000651,17z/data=!4m13!1m7!3m6!1s0x88646694b985915d:0x428622ff95744173!2s1807+Church+St,+Nashville,+TN+37203!3b1!8m2!3d36.1545148!4d-86.7978764!3m4!1s0x88646696a7e33c57:0x8dcb0086ca33c4c7!8m2!3d36.1546088!4d-86.797923",
+            "website": "http://www.icontattoo.com/",
+            "img": "assets/img/icon.jpg"
+        },
+        {
+            "name": "Safe House Tattoo Studio",
+            "region": "FANG",
+            "desc": "Our mission is to provide a safe place for both artist, and client to enjoy the world of tattoo art.",
+            "phone": "615.866.9810",
+            "maps": "https://www.google.com/maps/place/Safe+House+Tattoo+Studio/@36.1646859,-86.7959199,19.75z/data=!4m13!1m7!3m6!1s0x886466ef3f49593b:0x9c98dc2a8ea30dd8!2s1200+Clinton+St+%2340,+Nashville,+TN+37203!3b1!8m2!3d36.1647726!4d-86.7957165!3m4!1s0x0:0x120f86a4688ac5cd!8m2!3d36.164851!4d-86.7958279",
+            "website": "http://www.safehousetattoo.com/",
+            "img": "assets/img/safehouse.jpg"
+        },
+        {
+            "name": "Flash City Tattoo",
+            "region": "Midtown",
+            "desc": "Flash City Tattoo has been supplying Nashville with high quality tattoos of every style since September 2012.",
+            "phone": "615.320.9055",
+            "maps": "https://www.google.com/maps/place/Flash+City+Tattoo/@36.1516948,-86.8067793,14z/data=!4m13!1m7!3m6!1s0x88646694b985915d:0x428622ff95744173!2s1807+Church+St,+Nashville,+TN+37203!3b1!8m2!3d36.1545148!4d-86.7978764!3m4!1s0x0:0x3cfbfd88992f162a!8m2!3d36.1515788!4d-86.8042096",
+            "website": "http://flashcitytattoos.com/",
+            "img": "assets/img/flashcity.jpg"
         }
     ]
 }

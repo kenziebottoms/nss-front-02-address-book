@@ -4,11 +4,11 @@ Use XHR to create a simple tabbed contact info collection.
 
 ## Requirements
 
-- [ ] The page displays a tab for each letter of the alphabet that is represented in the address book by last name or business name.
+- [x] The page displays a tab for each letter of the alphabet that is represented in the address book by last name or business name.
     - Example: `"S"` would contain _Jane Smith_ and _The Smiling Elephant restaurant_.
-- [ ] The app comes pre-loaded with info for places restaurants, sights and other businesses in Nashville that have paid you to list them in your app.
-    - [ ] The built-in addresses/info should be stored in a local JSON file.
-- [ ] The user can click a tab to see the listings under that letter.
+- [x] The app comes pre-loaded with info for places restaurants, sights and other businesses in Nashville that have paid you to list them in your app.
+    - [x] The built-in addresses/info should be stored in a local JSON file.
+- [x] The user can click a tab to see the listings under that letter.
 - [ ] The user can type in a name, and the app displays the matching results.
 - [ ] The user should be able to store new contacts.
     - [ ] The form inputs and submit button should change from "find contact" to "add contact" based on a radio button selection.
