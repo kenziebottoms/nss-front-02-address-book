@@ -19,8 +19,14 @@ const search = term => {
     }
     let shops = shopModule.getShops();
     let results = shops.filter(shop => shop.name.toLowerCase().includes(term.toLowerCase()));
+    if (results.length == 0) {
+        results = shops.filter(shop => shop.desc.toLowerCase().includes(term.toLowerCase()));        
+    }
+    if (results.length == 0) {
+        results = shops.filter(shop => shop.region.toLowerCase().includes(term.toLowerCase()));        
+    }
     $.each(results, (index, result) => {
-        $("#search-results").append(result.name);
+        domController.addSearchResult(result);
     });
 };
 

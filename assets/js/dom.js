@@ -24,8 +24,7 @@ const addShop = (shop, index) => {
 };
 const addSearchResult = shop => {
     let card = getSearchCard(shop);
-    console.log("appending shop to #search-results");
-    $("#search-results").append(shop);
+    $("#search-results").append(card);
 };
 
 const getCard = shop => {
@@ -47,10 +46,10 @@ const getCard = shop => {
 const getSearchCard = shop => {
     return `<div class="card">
         <div class="py-5 card-img" style="background-image: url(${shop.img});">
-            <div class="card-body">
-                <h4 class="card-title">${shop.name}</h4>
-                <h6 class="card-subtitle mb-2 text-muted">${shop.region}</h6>
-            </div>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">${shop.name}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">${shop.region}</h6>
         </div>
     </div>`;
 };
