@@ -11,12 +11,17 @@
 </head>
 <body>
     <div class="container my-4">
-        <div class="row">
-            <div class="input-group col-md-6 mx-auto mb-4">
-                <input type="text" id="search" class="form-control" placeholder="Search shops">
-                <span class="input-group-btn">
-                  <button id="clear-search" class="btn btn-secondary" type="button">Clear search</button>
-                </span>
+        <div class="row mb-4 col-md-9 mx-auto">
+            <div class="input-group col">
+                <input type="text" id="search" class="form-control">
+            </div>
+            <div class="btn-group col-auto" id="content-mode" data-toggle="buttons">
+                <label class="btn btn-primary active m-0">
+                    <input type="radio" name="content-mode" id="search" autocomplete="off" checked> Search shops
+                </label>
+                <label class="btn btn-primary m-0">
+                    <input type="radio" name="content-mode" id="edit" autocomplete="off"> Add shop
+                </label>
             </div>
         </div>
         <div id="search-div" class="hidden row mt-2 mb-5">

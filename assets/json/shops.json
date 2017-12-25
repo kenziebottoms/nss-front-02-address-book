@@ -89,6 +89,15 @@
             "maps": "https://www.google.com/maps/place/Flash+City+Tattoo/@36.1516948,-86.8067793,14z/data=!4m13!1m7!3m6!1s0x88646694b985915d:0x428622ff95744173!2s1807+Church+St,+Nashville,+TN+37203!3b1!8m2!3d36.1545148!4d-86.7978764!3m4!1s0x0:0x3cfbfd88992f162a!8m2!3d36.1515788!4d-86.8042096",
             "website": "http://flashcitytattoos.com/",
             "img": "assets/img/flashcity.jpg"
+        },
+        {
+            "name": "Monolith Tattoo",
+            "region": "South Nashville",
+            "desc": "Monolith Tattoo Company is located at the corner of Thompson Lane and Nolensville Road. The owner is artist Zachariah G. Fincher.",
+            "phone": "615.254.5544",
+            "maps": "https://www.google.com/maps/place/Monolith+Tattoo+Co./@36.1124236,-86.7486301,17z/data=!4m13!1m7!3m6!1s0x886465f49cdd5ebf:0x7dac1126fa8de5b5!2s2803+Nolensville+Pike+b,+Nashville,+TN+37211!3b1!8m2!3d36.1124236!4d-86.7464361!3m4!1s0x886465f49cf4d1c5:0xae9013992898a824!8m2!3d36.1124236!4d-86.7464361",
+            "website": "https://monolithtattoostudio.com/",
+            "img": "assets/img/monolith.jpg"
         }
     ]
 }
