@@ -5,28 +5,33 @@ const domController = require("./dom");
 
 // switch to search mode
 const activateSearch = () => {
-    // TODO: deactivate edit
+    // TODO: deactivate add
     // activate search
     $('#search').on("keyup", search);
+    search();
 };
 
-// switch to edit mode
-const activateEdit = () => {
-    // deactivate search
+// switch to add mode
+const activateAdd = () => {
+    // deactivate and search and results
     $("#search").off("keyup", search);
-    // activate edit
-    $("#edit").on("click", event => {
-        // TODO: show edit form
+    $("#search-div").addClass("hidden");
+    // activate add button
+    $("#add").on("click", event => {
+        // TODO: show add/edit form
     });
 };
 
-// listens for edit/search buttons
+// listens for add/search buttons
 const activateContentMode = () => {
+    // start off searching
     activateSearch();
+    // add add/search event listeners
     $('#content-mode label').on("click", event => {
+        $("#search").val("");
         let mode = $(event.target).children("input").attr("id");
-        if (mode == "edit") {
-            activateEdit();
+        if (mode == "add") {
+            activateAdd();
         } else {
             activateSearch();
         }
@@ -34,8 +39,8 @@ const activateContentMode = () => {
 };
 
 // callback for event listener created in activateSearch()
-const search = event => {
-    let term = event.target.value.trim().toLowerCase();
+const search = () => {
+    let term = $("#search").val().trim().toLowerCase();
     
     // update title
     $("#search-div h5").text(`Results for "${term}"`);
@@ -62,8 +67,11 @@ const search = event => {
         // try searching region names
         results = shops.filter(shop => shop.region.toLowerCase().includes(term));
     }
+    if (results.length == 0) {
+        $("#search-results").append("No results.");
+    }
 
-    // add each shop to #search-results
+    // add each shop to #search-results"
     $.each(results, (index, result) => {
         domController.addSearchResult(result);
     });
