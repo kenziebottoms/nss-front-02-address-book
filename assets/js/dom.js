@@ -54,4 +54,10 @@ const getSearchCard = shop => {
     </div>`;
 };
 
-module.exports = {refreshShops, addSearchResult};
+const previewCard = shop => {
+    $("#preview").html("");
+    let card = getCard(shop);
+    $("#preview").append(card);
+};
+
+module.exports = {refreshShops, addSearchResult, previewCard};

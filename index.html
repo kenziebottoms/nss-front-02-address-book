@@ -30,7 +30,7 @@
             </div>
         </div>
         <div id="add-div" class="hidden row mt-2 mb-4">
-            <div class="col-12 col-md-10 col-lg-8 mx-auto alert alert-primary">
+            <div id="add-form" class="col-12 col-md-10 col-lg-8 mx-auto alert alert-primary">
                 <div class="row mb-3">
                     <div class="col input-group">
                         <span class="input-group-addon">Name</span>
@@ -71,7 +71,18 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 mx-auto">
-                        <button type="button" class="btn btn-primary btn-block">Save</button>
+                        <button id="add-preview" type="button" class="btn btn-primary btn-block">Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div id="preview-div" class="hidden col-12 col-md-10 col-lg-8 mx-auto">
+                <div id="preview"></div>
+                <div class="row">
+                    <div class="col">
+                        <button id="add-save-confirm" type="button" class="btn btn-primary btn-block">Yes, that looks good.</button>
+                    </div>
+                    <div class="col">
+                        <button id="add-save-cancel" type="button" class="btn btn-secondary btn-block">Let's try that again.</button>
                     </div>
                 </div>
             </div>

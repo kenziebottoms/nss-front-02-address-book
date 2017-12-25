@@ -3,24 +3,65 @@
 const shopModule = require("./shops");
 const domController = require("./dom");
 
-// switch to search mode
 const activateSearch = () => {
-    // TODO: deactivate add
-    // activate search
-    $('#search').on("keyup", search);
-    search();
+    deactivateAdd();
+    $('#search').on("keyup", searchListener);
+    $("#search-div").removeClass("hidden");
+    searchListener();
+};
+const deactivateSearch = () => {
+    $("#search").off("keyup", searchListener);
+    $("#search-div").addClass("hidden");
 };
 
-// switch to add mode
 const activateAdd = () => {
-    // deactivate and search and results
-    $("#search").off("keyup", search);
-    $("#search-div").addClass("hidden");
-    // show add form
+    deactivateSearch();
     $("#add-div").removeClass("hidden");
-    // activate add button
-    $("#add").on("click", event => {
-    });
+    $("#add-div").on("click", addListeners);
+};
+const deactivateAdd = () => {
+    $("#add-div").addClass("hidden");
+    $("#add-div").off("click", addListeners);
+};
+
+// listeners attached to the add form
+const addListeners = event => {
+    let id = $(event.target).attr("id");
+    if (id == "add-preview") {
+        previewButtonHandler();
+    } else if (id == "add-save-cancel") {
+        previewCancelHandler();
+    }
+    // TODO: submit preview button
+};
+
+// listens for clicks on the preview buttons
+const previewButtonHandler = () => {
+    // TODO: deal with empty forms
+    if ($("#add-preview").hasClass("disabled")) {
+
+    } else {
+        let shop = {
+            "name": $("#shop-name").val(),
+            "region": $("#shop-region").val(),
+            "desc": $("#shop-desc").val(),
+            "phone": $("#shop-phone").val(),
+            "maps": $("#shop-maps").val(),
+            "website": $("#shop-website").val(),
+            "img": $("#shop-img").val()
+        };
+        domController.previewCard(shop);
+        $("#preview-div").removeClass("hidden");
+        $("#add-form").addClass("hidden");
+    }
+};
+
+// clears the preview and focuses on the form
+const previewCancelHandler = () => {
+    $("#preview").html("");
+    $("#preview-div").addClass("hidden");
+    $("#add-form").removeClass("hidden");
+    $("#shop-name").focus();
 };
 
 // listens for add/search buttons
@@ -40,7 +81,7 @@ const activateContentMode = () => {
 };
 
 // callback for event listener created in activateSearch()
-const search = () => {
+const searchListener = () => {
     let term = $("#search").val().trim().toLowerCase();
     
     // update title

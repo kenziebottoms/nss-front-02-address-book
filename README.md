@@ -11,8 +11,8 @@ Use XHR to create a simple tabbed contact info collection.
 - [x] The user can click a tab to see the listings under that letter.
 - [x] The user can type in a name, and the app displays the matching results.
 - [ ] The user should be able to store new contacts.
-    - [ ] The form inputs and submit button should change from "find contact" to "add contact" based on a radio button selection.
-- [ ] When the user submits a contact, it should display below the form with two buttons: "Save" and "Edit".
+    - [x] The form inputs and submit button should change from "find contact" to "add contact" based on a radio button selection.
+- [x] When the user submits a contact, it should display below the form with two buttons: "Save" and "Edit".
     - [ ] If user clicks "save", the contact should be saved to localStorage, and be available to the same search function that retrieves the built-in contacts.
-    - [ ] If user clicks "Edit", the form is re-populated with the contact info so the user can edit it.
+    - [x] If user clicks "Edit", the form is re-populated with the contact info so the user can edit it.
 - [x] The UI should use Bootstrap.
