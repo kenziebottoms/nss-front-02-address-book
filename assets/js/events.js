@@ -7,12 +7,16 @@ const activateSearch = () => {
     $('#search').on("keyup", event => {
          search(event.target.value);
     });
+    $('#clear-search').on("click", event => {
+        $("#search").val("");
+        search("");
+    });
 };
 
 const search = term => {
     $("#search-div h5").text(`Results for "${term}"`);
     $("#search-results").html("");
-    if (term != "") {
+    if (term != undefined && term != "") {
         $("#search-div").removeClass("hidden");
     } else {
         $("#search-div").addClass("hidden");
