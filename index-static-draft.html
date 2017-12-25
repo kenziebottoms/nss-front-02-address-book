@@ -11,14 +11,69 @@
 </head>
 <body>
     <div class="container my-4">
+        <div class="row mb-4 col-12 col-lg-9 mx-auto">
+            <div class="input-group col">
+                <input type="text" id="search" class="form-control">
+            </div>
+            <div class="btn-group col-auto" id="content-mode" data-toggle="buttons">
+                <label class="btn btn-primary active m-0">
+                    <input type="radio" name="content-mode" id="search" autocomplete="off" checked> Search shops
+                </label>
+                <label class="btn btn-primary m-0">
+                    <input type="radio" name="content-mode" id="add" autocomplete="off"> Add shop
+                </label>
+            </div>
+        </div>
         <div class="row">
-            <div class="input-group col-md-6 mx-auto mb-4">
-                <input type="text" id="search" class="form-control" placeholder="Search shops">
+            <div id="add-form" class="col-12 col-md-10 col-lg-8 mx-auto alert alert-primary">
+                <div class="row mb-3">
+                    <div class="col input-group">
+                        <span class="input-group-addon">Name</span>
+                        <input type="text" class="form-control" id="shop-name" placeholder="Gold Club Electric Tattoo">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col input-group">
+                        <span class="input-group-addon">Region</span>
+                        <input type="text" class="form-control" id="shop-region" placeholder="Five Points">
+                    </div>
+                    <div class="col input-group">
+                        <span class="input-group-addon">Phone</span>
+                        <input type="text" class="form-control" id="shop-phone" placeholder="615.123.4567">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col input-group">
+                        <span class="input-group-addon">Description</span>
+                        <input type="text" class="form-control" id="shop-desc">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col input-group">
+                        <span class="input-group-addon">Website</span>
+                        <input type="text" class="form-control" id="shop-website" placeholder="http://www.goldclubelectric.com">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col input-group">
+                        <span class="input-group-addon">Google maps link</span>
+                        <input type="text" class="form-control" id="shop-maps">
+                    </div>
+                    <div class="col input-group">
+                        <span class="input-group-addon">Image URL</span>
+                        <input type="text" class="form-control" id="shop-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <button type="button" class="btn btn-primary btn-block">Save</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mt-2 mb-5">
-            <h5 class="col-md-8 mx-auto my-3">Results for 'term'</h5>
-            <div class="col-md-8 mx-auto" id="search-results">
+            <h5 class="col-12 my-3">Results for 'term'</h5>
+            <div class="col-12 mx-auto" id="search-results">
                 <div class="card">
                     <div class="py-5 card-img" style="background-image: url(assets/img/goldclubelectric.jpg);"></div>
                     <div class="card-body">

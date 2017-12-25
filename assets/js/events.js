@@ -16,9 +16,10 @@ const activateAdd = () => {
     // deactivate and search and results
     $("#search").off("keyup", search);
     $("#search-div").addClass("hidden");
+    // show add form
+    $("#add-div").removeClass("hidden");
     // activate add button
     $("#add").on("click", event => {
-        // TODO: show add/edit form
     });
 };
 
