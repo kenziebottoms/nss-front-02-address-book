@@ -5,7 +5,16 @@ const getLocalShops = () => {
     if (localShops) {
         return JSON.parse(localShops).shops;
     }
-    return false;
+    return [];
 };
 
-module.exports = {getLocalShops};
+const addLocalShop = shop => {
+    let localShops = getLocalShops();
+    localShops.push(shop);
+    localShops = {
+        "shops": localShops
+    };
+    localStorage.setItem("localShops", JSON.stringify(localShops));
+};
+
+module.exports = {getLocalShops, addLocalShop};

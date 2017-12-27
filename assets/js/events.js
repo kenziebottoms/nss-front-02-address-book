@@ -2,6 +2,7 @@
 
 const shopModule = require("./shops");
 const domController = require("./dom");
+const localStore = require("./localStorage");
 
 const activateSearch = () => {
     deactivateAdd();
@@ -34,25 +35,19 @@ const addListeners = event => {
         previewButtonHandler();
     } else if (id == "add-save-cancel") {
         previewCancelHandler();
+    } else if (id == "add-save-confirm") {
+        localStore.addLocalShop(domController.getShopFromForm());
     }
-    // TODO: submit preview button
 };
 
 // listens for clicks on the preview buttons
 const previewButtonHandler = () => {
     // TODO: deal with empty forms
+    let shop = domController.getShopFromForm();
+    console.log(shop);
     if ($("#add-preview").hasClass("disabled")) {
 
     } else {
-        let shop = {
-            "name": $("#shop-name").val(),
-            "region": $("#shop-region").val(),
-            "desc": $("#shop-desc").val(),
-            "phone": $("#shop-phone").val(),
-            "maps": $("#shop-maps").val(),
-            "website": $("#shop-website").val(),
-            "img": $("#shop-img").val()
-        };
         domController.previewCard(shop);
         $("#preview-div").removeClass("hidden");
         $("#add-form").addClass("hidden");

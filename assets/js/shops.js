@@ -62,7 +62,6 @@ const parseShops = data => {
 
 const parseLocalShops = () => {
     let localShops = localStore.getLocalShops();
-    console.log(localShops);
     $.each(localShops, (index, element) => {
         addShop(element);
     });

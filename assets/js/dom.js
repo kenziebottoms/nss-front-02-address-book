@@ -61,4 +61,17 @@ const previewCard = shop => {
     $("#preview").append(card);
 };
 
-module.exports = {refreshShops, addSearchResult, previewCard};
+const getShopFromForm = () => {
+    let shop = {
+        "name": $("#shop-name").val(),
+        "region": $("#shop-region").val(),
+        "desc": $("#shop-desc").val(),
+        "phone": $("#shop-phone").val(),
+        "maps": $("#shop-maps").val(),
+        "website": $("#shop-website").val(),
+        "img": $("#shop-img").val()
+    };
+    return shop;
+};
+
+module.exports = {refreshShops, addSearchResult, previewCard, getShopFromForm};
