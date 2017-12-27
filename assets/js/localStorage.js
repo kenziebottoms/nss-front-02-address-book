@@ -1,5 +1,6 @@
 "use strict";
 
+// get list of shops in localStorage
 const getLocalShops = () => {
     const localShops = localStorage.getItem("localShops");
     if (localShops) {
@@ -8,6 +9,7 @@ const getLocalShops = () => {
     return [];
 };
 
+// add shop to list of shops in localStorage
 const addLocalShop = shop => {
     let localShops = getLocalShops();
     localShops.push(shop);
