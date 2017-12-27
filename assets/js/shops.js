@@ -1,6 +1,7 @@
 "use strict";
 
 const domController = require("./dom");
+const localStore = require("./localStorage");
 
 let shops = [];
 
@@ -51,11 +52,20 @@ const retrieveShops = url => {
 };
 
 const parseShops = data => {
+    parseLocalShops();
     let shops = JSON.parse(data).shops;
     shops.forEach(shop => {
         addShop(shop);
     });
     domController.refreshShops();
+};
+
+const parseLocalShops = () => {
+    let localShops = localStore.getLocalShops();
+    console.log(localShops);
+    $.each(localShops, (index, element) => {
+        addShop(element);
+    });
 };
 
 module.exports = {addShop, getShops, fetchShops};
