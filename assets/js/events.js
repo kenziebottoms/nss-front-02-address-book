@@ -18,6 +18,9 @@ const activateAdd = () => {
     deactivateSearch();
     $("#add-div").removeClass("hidden");
     $("#add-div").on("click", addListeners);
+    $("#shop-name").val($("#search").val());
+    $("#search").val("");
+    $("#shop-name").focus();
 };
 const deactivateAdd = () => {
     $("#add-div").addClass("hidden");
@@ -64,16 +67,16 @@ const previewCancelHandler = () => {
     $("#shop-name").focus();
 };
 
-// listens for add/search buttons
+// listens for add/search mode buttons
 const activateContentMode = () => {
     // start off searching
     activateSearch();
     // add add/search event listeners
     $('#content-mode label').on("click", event => {
-        $("#search").val("");
         let mode = $(event.target).children("input").attr("id");
         if (mode == "add") {
-            activateAdd();
+            // dumb fix for focus on click
+            setTimeout(activateAdd, 0);
         } else {
             activateSearch();
         }
