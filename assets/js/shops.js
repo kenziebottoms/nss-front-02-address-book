@@ -1,19 +1,29 @@
 "use strict";
 
 const domController = require("./dom");
+const localStore = require("./localStorage");
 
+// "global list"
 let shops = [];
 
+// add shop to global list
 const addShop = shop => {
     shops.push(shop);
 };
 
+// get all shops, local and JSON, and sort them
 const getShops = () => {
-    sortShops();
-    return shops;
+    let allShops = shops.slice();
+    let localShops = localStore.getLocalShops();
+    $.each(localShops, (index, element) => {
+        allShops.push(element);
+    });
+    sortShops(allShops);
+    return allShops;
 };
 
-const sortShops = () => {
+// sort given list of shops alphabetically by name
+const sortShops = shops => {
     shops.sort((a,b) => {
         let aName = a.name.toLowerCase();
         let bName = b.name.toLowerCase();
@@ -27,10 +37,12 @@ const sortShops = () => {
     });
 };
 
+// retrieve shops from JSON and then parse them
 const fetchShops = url => {
     retrieveShops("assets/json/shops.json").then(parseShops);
 };
 
+// sends the XHR and gives instructions on response
 const retrieveShops = url => {
     let shopPromise = new Promise((resolve, reject) => {
         let shopRequest = new XMLHttpRequest();
@@ -50,6 +62,7 @@ const retrieveShops = url => {
     return shopPromise;
 };
 
+// adds each shop from JSON to the global list
 const parseShops = data => {
     let shops = JSON.parse(data).shops;
     shops.forEach(shop => {

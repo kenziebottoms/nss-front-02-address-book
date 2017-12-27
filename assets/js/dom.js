@@ -1,33 +1,60 @@
 "use strict";
 
+// flushes the toilet and repopulates all shops
 const refreshShops = () => {
-    // ASK: doesn't work if the require is global
+    // TOASK: doesn't work if the require is global
     const shopModule = require("./shops");
 
+    // empty all pages
     $("#alpha-dir-tabContent .tab-pane").html("");
+    // deactivate all tabs
+    $("alpha-dir > a.nav-link").addClass("hidden");
+    // hide all pages
+    $("alpha-dir-tabContent > div").addClass("hidden");
+
     let shops = shopModule.getShops();
     shops.forEach((shop, index) => {
-        addShop(shop, index);
+        addShop(shop);
+        if (index == 0) {
+            focusTab(shop.name);
+        }
     });
 };
 
-const addShop = (shop, index) => {
+// add shop to the DOM
+const addShop = (shop) => {
     let letter = shop.name.substring(0,1).toLowerCase();
     let letterDiv = $(`#${letter}`);
     let letterTab = $(`#${letter}-tab`);
     letterDiv.append(getCard(shop));
     letterDiv.removeClass("hidden");
     letterTab.removeClass("hidden");
-    if (index == 0) {
-        letterTab.addClass("active");
-        letterDiv.addClass("show active");
-    }
 };
+
+// focuses on tab that contains the shop called shopName
+const focusTab = shopName => {
+    let letter = shopName.substring(0,1).toLowerCase();
+
+    // deactivate all pages
+    $("#alpha-dir-tabContent > div").removeClass("show active");
+    let letterDiv = $(`#${letter}`);
+    // activate this page
+    letterDiv.addClass("show active");
+
+    // deactivate all tabs
+    $("#alpha-dir > a").removeClass("active");
+    // activate this tab
+    let letterTab = $(`#${letter}-tab`);
+    letterTab.addClass("active");
+};
+
+// add shop to search results
 const addSearchResult = shop => {
     let card = getSearchCard(shop);
     $("#search-results").append(card);
 };
 
+// returns HTML string of card for tab pages
 const getCard = shop => {
     return `<div class="card mb-3">
         <img class="card-img-top" src="${shop.img}">
@@ -44,6 +71,7 @@ const getCard = shop => {
     </div>`;
 };
 
+// returns HTML string of card for search results
 const getSearchCard = shop => {
     return `<div class="card">
         <div class="py-5 card-img" style="background-image: url(${shop.img});">
@@ -55,10 +83,25 @@ const getSearchCard = shop => {
     </div>`;
 };
 
+// populate preview card with shop and show
 const previewCard = shop => {
     $("#preview").html("");
     let card = getCard(shop);
     $("#preview").append(card);
 };
 
-module.exports = {refreshShops, addSearchResult, previewCard};
+// returns shop object from the contents of the preview form
+const getShopFromForm = () => {
+    let shop = {
+        "name": $("#shop-name").val(),
+        "region": $("#shop-region").val(),
+        "desc": $("#shop-desc").val(),
+        "phone": $("#shop-phone").val(),
+        "maps": $("#shop-maps").val(),
+        "website": $("#shop-website").val(),
+        "img": $("#shop-img").val()
+    };
+    return shop;
+};
+
+module.exports = {refreshShops, addSearchResult, previewCard, getShopFromForm};
