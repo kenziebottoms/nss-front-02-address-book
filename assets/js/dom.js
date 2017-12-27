@@ -1,8 +1,9 @@
 "use strict";
 
-const shopModule = require("./shops");
-
 const refreshShops = () => {
+    // ASK: doesn't work if the require is global
+    const shopModule = require("./shops");
+
     $("#alpha-dir-tabContent .tab-pane").html("");
     let shops = shopModule.getShops();
     shops.forEach((shop, index) => {

@@ -1,5 +1,7 @@
 "use strict";
 
+const domController = require("./dom");
+
 let shops = [];
 
 const addShop = shop => {
@@ -25,4 +27,35 @@ const sortShops = () => {
     });
 };
 
-module.exports = {addShop, getShops};
+const fetchShops = url => {
+    retrieveShops("assets/json/shops.json").then(parseShops);
+};
+
+const retrieveShops = url => {
+    let shopPromise = new Promise((resolve, reject) => {
+        let shopRequest = new XMLHttpRequest();
+        shopRequest.open("GET", url);
+        shopRequest.onload = () => {
+            if (shopRequest.status == 200) {
+                resolve(shopRequest.response);
+            } else {
+                reject(shopRequest.statusText);
+            }
+        };
+        shopRequest.onerror = () => {
+            reject(shopRequest.statusText);
+        };
+        shopRequest.send();
+    });
+    return shopPromise;
+};
+
+const parseShops = data => {
+    let shops = JSON.parse(data).shops;
+    shops.forEach(shop => {
+        addShop(shop);
+    });
+    domController.refreshShops();
+};
+
+module.exports = {addShop, getShops, fetchShops};
